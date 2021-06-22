@@ -5,11 +5,13 @@ import requests
 baseUrl = "https://ipwhois.app/json/"
 
 userArgs = sys.argv;
-if len(userArgs) == 0:
+if len(userArgs) <1:
     print("No IP address entered, try it like this: \n\tpython3 locator.py 0.0.0.0")
 else:
-    ip = sys.argv[0]
+    ip = sys.argv[1]
+    print(ip)
     requestUrl = baseUrl+ip
+    print(requestUrl)
     responseData = requests.get(requestUrl)
 
     if responseData: #If the get request was successful
