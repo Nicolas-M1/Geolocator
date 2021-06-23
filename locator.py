@@ -15,8 +15,6 @@ else:
     isOwnIp = False
 requestUrl = baseUrl+ip
 
-print(requestUrl)
-
 responseData = requests.get(requestUrl)
 
 if responseData: #If the get request was successful
